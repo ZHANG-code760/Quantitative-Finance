@@ -12,4 +12,10 @@
 - on: 可选参数。对于dataframe而言，指定要计算滚动窗口的列。值为列名  
 - axis: 默认为0，即对列进行计算  
 - closed：定义区间的开闭，支持int类型的window。对于offset类型默认是左开右闭的即默认为right。可以根据情况指定为left、both等。
+**示例**  
+使用移动窗口计算移动平均值：`df.rolling(window=5).mean()`  
+使用移动窗口计算方差：`df.rolling(window=5).std()`  
 
+**选取DataFrame的指定行和列**  
+选取列并返回DataFrame类型的数据：`df[['col']]`  
+选取列并返回Series类型的数据：`df['col']`  
