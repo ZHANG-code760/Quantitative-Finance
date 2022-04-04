@@ -22,3 +22,8 @@
 
 5.**按两列的值对DataFrame进行排序**  
 `sort_values(by = ['col1', 'col2'])`
+
+`sort_index()`
+
+6.**使用sort_values等函数后，index会被打乱，按照现在顺序重新顺序标注index**  
+`df.reset_index(drop=True, inplace=True)`
